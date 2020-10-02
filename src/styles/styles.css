@@ -21,9 +21,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .container .initial-screen {
@@ -41,9 +41,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
-.container .tutorial {
+.container .initial-screen h1 {
+  font-size: 60px;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.container .initial-screen .tutorial {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,9 +65,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.container .colorToGuess {
+.container .initial-screen .tutorial #firstSteps {
+  margin-bottom: 2rem;
+}
+
+.container .initial-screen .tutorial .colorToGuess {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,32 +86,41 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 2rem;
 }
 
-.container .colorToGuess .mainColor {
+.container .initial-screen .tutorial .colorToGuess .mainColor {
   height: 5rem;
   width: 22rem;
   border: 1px solid black;
 }
 
-.container .colorsToPick {
+.container .initial-screen .tutorial #secondSteps {
+  margin-bottom: 2rem;
+}
+
+.container .initial-screen .tutorial .colorsToPick {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .colorsToPick .color {
+.container .initial-screen .tutorial .colorsToPick .color {
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 50%;
   border: 1px solid black;
 }
 
-.container .colorsToPick .color:first-child {
+.container .initial-screen .tutorial .colorsToPick .color:first-child {
   margin-right: 2rem;
 }
 
-.container .colorsToPick .color + .color {
+.container .initial-screen .tutorial .colorsToPick .color + .color {
   margin-right: 2rem;
+}
+
+.container .initial-screen .tutorial #readyTutorial {
+  padding-top: 2rem;
 }
 /*# sourceMappingURL=styles.css.map */
