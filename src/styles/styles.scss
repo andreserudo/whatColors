@@ -5,3 +5,68 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.author {
+  text-align: center;  
+}
+
+.container {
+  height: 97vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .initial-screen {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;  
+  }
+
+  .tutorial {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+
+  }
+
+  .colorToGuess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+
+    .mainColor {
+      height: 5rem;
+      width: 22rem;
+      border: 1px solid rgb(0, 0, 0);
+    }
+  }
+
+  .colorsToPick {
+    display: flex;
+
+    .color {
+      height: 4.5rem;
+      width: 4.5rem;
+      border-radius: 50%;
+      border: 1px solid rgb(0, 0, 0);
+    }
+
+    .color:first-child {
+      margin-right: 2rem;
+    }
+    .color + .color {
+      margin-right: 2rem;
+    }
+
+  }
+
+}
