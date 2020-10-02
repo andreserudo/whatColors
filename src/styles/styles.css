@@ -123,4 +123,12 @@
 .container .initial-screen .tutorial #readyTutorial {
   padding-top: 2rem;
 }
+
+.container .initial-screen #startGame {
+  text-decoration: none;
+}
+
+.container .game {
+  display: none;
+}
 /*# sourceMappingURL=styles.css.map */
