@@ -235,4 +235,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.container .game .content .given-color {
+  width: 80%;
+  height: 6rem;
+  border: 1px solid black;
+}
+
+.container .game .content .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .game .content .colors .color {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 2rem;
+}
 /*# sourceMappingURL=styles.css.map */
