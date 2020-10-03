@@ -1,0 +1,125 @@
+@import './scenes/game';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(242, 247, 242);
+  color: rgb(49, 41, 32);
+}
+
+.author {
+  text-align: center;  
+}
+
+.container {
+  height: 97vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  .initial-screen {
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;      
+
+    h1{
+      font-size: 60px;
+      margin-top: 4rem;
+      margin-bottom: 3rem
+    }  
+
+    .tutorial {
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;    
+
+      margin-bottom: 2rem;
+      #firstSteps{
+        margin-bottom: 2rem;
+      }
+
+      .colorToGuess {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        margin-bottom: 2rem;
+
+        .mainColor {
+          height: 5rem;
+          width: 60%;
+          border: 1px solid rgb(0, 0, 0);
+        }
+      }
+
+      #secondSteps{
+        margin-bottom: 2rem;
+      }
+
+      .colorsToPick {
+        display: flex;
+        
+        .color {
+          height: 4.5rem;
+          width: 4.5rem;
+          border-radius: 50%;
+          border: 1px solid rgb(0, 0, 0);
+        }
+
+        .color:first-child {
+          margin-right: 2rem;
+        }
+        .color + .color {
+          margin-right: 2rem;
+        }
+
+      }
+
+      #readyTutorial{
+        padding-top: 2rem;
+      }
+    }
+
+    .start-game{    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      #startGame {
+        text-decoration: none;
+        background-color: rgb(167, 200, 147);
+    
+        border-radius: 2px;
+        padding: 1rem 2rem;    
+        margin: .5rem;
+
+        color: white;
+        font-weight: bolder;
+        font-size: x-large;    
+      }
+
+      hr{
+        width: 25%;
+        height: 1px;
+      }
+    
+    }
+  
+  }
+
+  @include gameStyle;
+}

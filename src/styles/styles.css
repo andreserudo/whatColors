@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f7f2;
+  color: #312920;
+}
+
+.author {
+  text-align: center;
+}
+
+.container {
+  height: 97vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.container .initial-screen {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .initial-screen h1 {
+  font-size: 60px;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.container .initial-screen .tutorial {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.container .initial-screen .tutorial #firstSteps {
+  margin-bottom: 2rem;
+}
+
+.container .initial-screen .tutorial .colorToGuess {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.container .initial-screen .tutorial .colorToGuess .mainColor {
+  height: 5rem;
+  width: 60%;
+  border: 1px solid black;
+}
+
+.container .initial-screen .tutorial #secondSteps {
+  margin-bottom: 2rem;
+}
+
+.container .initial-screen .tutorial .colorsToPick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .initial-screen .tutorial .colorsToPick .color {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.container .initial-screen .tutorial .colorsToPick .color:first-child {
+  margin-right: 2rem;
+}
+
+.container .initial-screen .tutorial .colorsToPick .color + .color {
+  margin-right: 2rem;
+}
+
+.container .initial-screen .tutorial #readyTutorial {
+  padding-top: 2rem;
+}
+
+.container .initial-screen .start-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.container .initial-screen .start-game #startGame {
+  text-decoration: none;
+  background-color: #a7c893;
+  border-radius: 2px;
+  padding: 1rem 2rem;
+  margin: .5rem;
+  color: white;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.container .initial-screen .start-game hr {
+  width: 25%;
+  height: 1px;
+}
+
+.container .game {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */
