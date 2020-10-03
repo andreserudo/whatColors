@@ -24,12 +24,17 @@
           flex-grow: 1;
           text-align: center;
 
-          color: white;
-          background-color: rgba(90, 169, 230, 0.5);                    
+          color: white;                    
+          background-color: rgba(90, 169, 230, 0.5);          
         }
 
-        .level:first-child{
-          background-color: rgb(90, 169, 230);
+        .clear{    
+          background-color: rgb(90, 169, 230);                
+        }
+
+        .active{
+          background-color: rgb(33, 67, 94);                
+          border: 1px solid blue;
         }
       }
 

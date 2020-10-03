@@ -207,8 +207,13 @@ body {
   background-color: rgba(90, 169, 230, 0.5);
 }
 
-.container .game .content .container-levels .level:first-child {
+.container .game .content .container-levels .clear {
   background-color: #5aa9e6;
+}
+
+.container .game .content .container-levels .active {
+  background-color: #21435e;
+  border: 1px solid blue;
 }
 
 .container .game .content .container-score {
