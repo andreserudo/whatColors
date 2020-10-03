@@ -1,8 +1,49 @@
 @mixin gameStyle{
 
   .game{
+    height: 50%;
+    width: 70%;
     display: none;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .content{
+      width: 80%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;           
+      
+      .container-levels {
+        width: 100%;
+        display: flex;
+
+        .level{
+          flex-grow: 1;
+          text-align: center;
+
+          color: white;
+          background-color: rgba(90, 169, 230, 0.5);                    
+        }
+
+        .level:first-child{
+          background-color: rgb(90, 169, 230);
+        }
+      }
+
+      .container-score {
+        display: flex;
+
+        .your-score,
+        .best-score{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
   }
   
 }
