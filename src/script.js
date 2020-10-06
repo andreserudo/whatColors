@@ -53,6 +53,18 @@ function stylingColor(level, phase){
   console.log(colors);
 }
 
+function choseColor(e){
+  console.log(e.srcElement);
+}
+
+function addingClickColorEvent() {
+  const colors = document.querySelectorAll('.colors .color');
+
+  colors.forEach(element => {
+    element.addEventListener('click', choseColor);
+  })
+}
+
 function createColor(){    
   const colors = document.querySelector('.colors');  
   let color = document.createElement('div');
@@ -72,6 +84,7 @@ function newGame(){
 
   for(let i=0; i<game[currentLevel].colors; i+= 1){
     createColor();
+    addingClickColorEvent()
   }
 
   stylingColor();
