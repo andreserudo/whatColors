@@ -57,13 +57,22 @@
 
       .colors {
         display: flex;
-        
+        padding: .5rem;
         .color {
           height: 4.5rem;
           width: 4.5rem;
-          border-radius: 50%;
-          border: 1px solid rgb(0, 0, 0);
+          border-radius: 50%;          
           margin-right: 2rem;    
+
+          cursor: pointer;
+        }
+
+        .correct {
+          border: 2px solid #06d6a0;
+        }
+
+        .incorrect {
+          border: 2px solid red;
         }
       }
     }
