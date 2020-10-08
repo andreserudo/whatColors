@@ -4,6 +4,16 @@ let currentPhase = 0;
 let tries = 3;
 const game = [
   {
+    level: 0,
+    phases: 2,
+    numberOfColorsToPass: 2,
+    colors: 3,
+    givenCollors: ['rgb(255, 128, 128)', 'rgb(128, 36, 86)'],
+    colorOne: ['rgb(255, 0, 0)','rgb(255, 0, 0)'],
+    colorTwo: ['rgb(255, 255, 255)','rgb(0, 71, 171)'],
+    colorRandom: ['rgb(255, 128, 213)','rgb(0, 237, 255)']
+  },
+  {
     level: 1,
     phases: 2,
     numberOfColorsToPass: 2,
@@ -15,17 +25,7 @@ const game = [
   },
   {
     level: 2,
-    phases: 3,
-    numberOfColorsToPass: 2,
-    colors: 3,
-    givenCollors: ['rgb(255, 128, 128)', 'rgb(128, 36, 86)'],
-    colorOne: ['rgb(255, 0, 0)','rgb(255, 0, 0)'],
-    colorTwo: ['rgb(255, 255, 255)','rgb(0, 71, 171)'],
-    colorRandom: ['rgb(255, 128, 213)','rgb(0, 237, 255)']
-  },
-  {
-    level: 3,
-    phases: 3,
+    phases: 2,
     numberOfColorsToPass: 2,
     colors: 3,
     givenCollors: ['rgb(255, 128, 128)', 'rgb(128, 36, 86)'],
@@ -49,7 +49,7 @@ function loseTries() {
 // An implementation of Fisher-Yates (aka Knuth) Shuffle algorithm
 // https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+  let currentIndex = array.length, temporaryValue, randomIndex;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
@@ -67,7 +67,7 @@ function shuffle(array) {
   return array;
 }
 
-function stylingColor(level, phase){  
+function stylingColor(level, phase){    
   let arrayColors = [ 
     game[currentLevel].colorOne[currentPhase], 
     game[currentLevel].colorTwo[currentPhase], 
@@ -144,15 +144,14 @@ function createColor(){
   colors.append(color);
 }
 
-function newPhase(){
-  
+function newPhase(){  
   if (currentPhase+1 === game[currentLevel].phases) {    
     currentPhase = 0;
     currentLevel++;
   }else{
     currentPhase++;
   }  
-  
+    
   removingColors();
 
   for(let i=0; i<game[currentLevel].colors; i+= 1){
