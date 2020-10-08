@@ -5,6 +5,16 @@ let tries = 3;
 const game = [
   {
     level: 1,
+    phases: 2,
+    numberOfColorsToPass: 2,
+    colors: 3,
+    givenCollors: ['rgb(255, 128, 128)', 'rgb(128, 36, 86)'],
+    colorOne: ['rgb(255, 0, 0)','rgb(255, 0, 0)'],
+    colorTwo: ['rgb(255, 255, 255)','rgb(0, 71, 171)'],
+    colorRandom: ['rgb(255, 128, 213)','rgb(0, 237, 255)']
+  },
+  {
+    level: 2,
     phases: 3,
     numberOfColorsToPass: 2,
     colors: 3,
@@ -12,8 +22,18 @@ const game = [
     colorOne: ['rgb(255, 0, 0)','rgb(255, 0, 0)'],
     colorTwo: ['rgb(255, 255, 255)','rgb(0, 71, 171)'],
     colorRandom: ['rgb(255, 128, 213)','rgb(0, 237, 255)']
-  }
-];    
+  },
+  {
+    level: 3,
+    phases: 3,
+    numberOfColorsToPass: 2,
+    colors: 3,
+    givenCollors: ['rgb(255, 128, 128)', 'rgb(128, 36, 86)'],
+    colorOne: ['rgb(255, 0, 0)','rgb(255, 0, 0)'],
+    colorTwo: ['rgb(255, 255, 255)','rgb(0, 71, 171)'],
+    colorRandom: ['rgb(255, 128, 213)','rgb(0, 237, 255)']
+  },
+];
 
 function loseTries() {
   tries -= 1;
@@ -23,7 +43,7 @@ function loseTries() {
   } else {
     console.log(tries);
   }
-  
+
 }
 
 // An implementation of Fisher-Yates (aka Knuth) Shuffle algorithm
@@ -72,12 +92,12 @@ function chosenColour(e){
   const colourElement = e.srcElement;
   const colourChoose = e.srcElement.style.backgroundColor;
   const colourClassName = e.srcElement.className;
-
+  
   if (!colourClassName.includes('correct')) {
     if((game[currentLevel].colorOne[currentPhase] === colourChoose) || 
       (game[currentLevel].colorTwo[currentPhase] === colourChoose) ){
         const otherIncorrect = document.querySelector('.incorrect');
-        console.log(otherIncorrect);
+        
         if(otherIncorrect){
           otherIncorrect.classList.remove('incorrect');
         }        
@@ -93,7 +113,9 @@ function chosenColour(e){
   const totalAnswers = document.querySelectorAll('.correct');  
 
   if (totalAnswers.length === game[currentLevel].numberOfColorsToPass) {
-    newPhase();
+
+    newPhase();    
+    
   }
   
 }
@@ -123,8 +145,14 @@ function createColor(){
 }
 
 function newPhase(){
-  currentPhase++;
-
+  
+  if (currentPhase+1 === game[currentLevel].phases) {    
+    currentPhase = 0;
+    currentLevel++;
+  }else{
+    currentPhase++;
+  }  
+  
   removingColors();
 
   for(let i=0; i<game[currentLevel].colors; i+= 1){
@@ -133,6 +161,7 @@ function newPhase(){
   }
 
   stylingColor();  
+  
 }
 
 function newGame(){ 
